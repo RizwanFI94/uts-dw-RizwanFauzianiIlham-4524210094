@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kreator Kartu Produk Nusantara Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title-bar">
+        <h1>Form Produk Nusantara Marketplace</h1>
+    </div>
+
+    <div class="main-container">
+        <form id="product-form">
+        <fieldset>
+            <legend>Informasi Produk</legend>
+
+             <p>
+                <label for="product-category">Kategori Produk:</label><br />
+                <input
+                    list="categories"
+                    id="product-category"
+                    name="product_category"
+                    placeholder="Pilih kategori...klik 2x"
+                />
+                <datalist id="categories">
+                    <option value="HandPhone"></option>
+                    <option value="Pakaian"></option>
+                    <option value="Komponen Otomotif"></option>
+                    <option value="Aksesoris"></option>
+                </datalist>
+            </p>
+
+            <p>
+                <label for="product-name">Nama Produk:</label><br />
+                 <input
+                    type="text"
+                    id="product-name"
+                    name="product_name"
+                    required
+                    maxlength="80"
+                    placeholder="Contoh: Velg GSXRR, Body Kit Race"
+                />
+            </p>
+
+            <p>
+                <label for="product-price">Harga Produk (Rp):</label><br />
+                <input
+                    type="number"
+                    id="product-price"
+                    name="product_price"
+                    min="1500"
+                    placeholder="Contoh: 15000000"
+            />
+            </p>
+
+            <p>
+                <label for="product-desc">Deskripsi Produk:</label><br />
+                <textarea
+                    id="product-desc"
+                    name="product_desc"
+                    rows="4"
+                    placeholder="Contoh: Velg GSXRR dengan Lebar depan 3.5ich dan Belakang 6inch"
+                ></textarea>
+            </p>
+
+            <p>
+                <label for="product-location">Lokasi :</label><br />
+                <input
+                    type="text"
+                    id="product-location"
+                    name="product_location"
+                    placeholder="Contoh: Depok, Jakarta, Bogor"
+                />
+            </p>
+
+            <p>
+                <label for="product-image">Upload Gambar Produk:</label><br />
+                <input
+                    type="file"
+                    id="product-image"
+                    name="product_image"
+                    accept="image/*"
+                />
+            </p>
+
+            <button type="submit" id="upload-button">Upload Produk</button>
+
+        </fieldset>
+    </form>
+
+    <article>
+        <h1>Pratinjau Kartu Produk</h1>
+
+        <header>
+            <h1 id="preview-name">Isi dari Nama Produk</h1>
+            <p id="preview-category">Isi dari Kategori Produk</p>
+        </header>
+
+        <figure>
+            <img id="preview-image" src="gambarproduk.jpg" alt="Gambar Produk Nusantara" width="300" />
+        </figure>
+
+        <section>
+            <p id="preview-price">Rp 15000000</p>
+        </section>
+
+        <section>
+            <p id="preview-location">Lokasi: Depok</p>
+        </section>
+
+        <section>
+            <p id="preview-desc">Isi Deskripsi Produk</p>
+        </section>
+
+        <footer class="site-footer">
+            <p>&copy; 2025 Nusantara Marketplace — Tempat Produk Second Berkualitas</p>
+        </footer>
+
+        </article>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
